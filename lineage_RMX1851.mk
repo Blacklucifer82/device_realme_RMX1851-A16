@@ -4,21 +4,36 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Infinity stuff
+# Inherit some common AxionOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR :=false
-INFINITY_MAINTAINER := Sourabh
-WITH_GAPPS := false
-PERF_ANIM_OVERRIDE := true
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Axion-ify!
+AXION_CAMERA_REAR_INFO := 16,5
+AXION_CAMERA_FRONT_INFO := 25
+AXION_MAINTAINER := Sourabh
+AXION_PROCESSOR := Qualcomm_Snapdragon_710_AIE
+PERF_ANIM_OVERRIDE := true
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
+# Lineage prebuilts
+ifneq ($(WITH_GMS),true)
+TARGET_INCLUDES_LOS_PREBUILTS := true
+endif
+
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := infinity_RMX1851
+PRODUCT_NAME := lineage_RMX1851
 PRODUCT_MODEL := RMX1851
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
