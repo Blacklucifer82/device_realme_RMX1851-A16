@@ -4,13 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Infinity stuff
+# Inherit some common Evolution-X stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR :=false
-INFINITY_MAINTAINER := Sourabh
-WITH_GAPPS := false
+TARGET_USES_MINI_GAPPS := true
 PERF_ANIM_OVERRIDE := true
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
