@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_RMX1851.mk
+    $(LOCAL_DIR)/custom_RMX1851.mk
 
 COMMON_LUNCH_CHOICES := \
-    infinity_RMX1851-userdebug \
-    infinity_RMX1851-eng \
-    infinity_RMX1851-user
+    custom_RMX1851-userdebug \
+    custom_RMX1851-eng \
+    custom_RMX1851-user
