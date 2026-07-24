@@ -4,21 +4,24 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Infinity stuff
+# Inherit some common voltageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR :=false
-INFINITY_MAINTAINER := Sourabh
 WITH_GAPPS := false
 PERF_ANIM_OVERRIDE := true
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Voltage Flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+VOLTAGE_BUILD_TYPE := UNOFFICIAL
+
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := infinity_RMX1851
+PRODUCT_NAME := voltage_RMX1851
 PRODUCT_MODEL := RMX1851
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
