@@ -6,7 +6,7 @@
 
 # Inherit some common AxionOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_ENABLE_BLUR :=false
+TARGET_ENABLE_BLUR := false
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -20,11 +20,6 @@ AXION_MAINTAINER := Sourabh
 AXION_PROCESSOR := Qualcomm_Snapdragon_710_AIE
 TARGET_INCLUDE_AXFX := true
 PERF_ANIM_OVERRIDE := true
-PERF_GOV_SUPPORTED := true
-PERF_DEFAULT_GOV := schedutil
-GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
-GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 # Lineage prebuilts
 ifneq ($(WITH_GMS),true)
