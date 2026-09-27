@@ -6,8 +6,10 @@
 
 # Inherit some common LunarisAOSP stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_ENABLE_BLUR :=false
 TARGET_ENABLE_BLUR := false
+TARGET_ENABLE_BLUR := true
+PERF_ANIM_OVERRIDE := true
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
