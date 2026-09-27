@@ -6,7 +6,7 @@
 
 # Inherit some common Pixelos stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_ENABLE_BLUR :=false
+TARGET_ENABLE_BLUR := true
 PERF_ANIM_OVERRIDE := true
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
