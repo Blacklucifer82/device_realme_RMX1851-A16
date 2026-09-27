@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX1851.mk
+    $(LOCAL_DIR)/aicp_RMX1851.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX1851-userdebug \
-    lineage_RMX1851-eng \
-    lineage_RMX1851-user
+    aicp_RMX1851-userdebug \
+    aicp_RMX1851-eng \
+    aicp_RMX1851-user
