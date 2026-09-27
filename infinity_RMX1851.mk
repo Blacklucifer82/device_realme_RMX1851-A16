@@ -6,7 +6,7 @@
 
 # Inherit some common Infinity stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_ENABLE_BLUR :=false
+TARGET_ENABLE_BLUR := false
 INFINITY_MAINTAINER := Sourabh
 WITH_GAPPS := false
 PERF_ANIM_OVERRIDE := true
