@@ -8,6 +8,7 @@
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := false
 PERF_ANIM_OVERRIDE := true
+SAKURA_MAINTAINER := Sourabh
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
