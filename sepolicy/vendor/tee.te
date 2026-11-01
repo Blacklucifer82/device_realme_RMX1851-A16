@@ -1,1 +1,7 @@
 allow tee persist_file:lnk_file read;
+
+# The gatekeeper TA keeps its records in /data/vendor/gatekeeper.
+# Android 17 moved gatekeeper_vendor_data_file to vendor policy without granting tee access,
+# causing PIN/pattern unlock failure on boot (nwd_KM_OUTDATA_unpack err -506).
+allow tee gatekeeper_vendor_data_file:dir rw_dir_perms;
+allow tee gatekeeper_vendor_data_file:file create_file_perms;
