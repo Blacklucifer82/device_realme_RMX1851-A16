@@ -49,10 +49,14 @@
 /persist/sensors(/.*)?          u:object_r:sensors_persist_file:s0
 
 # Oppo Partitions
-/dev/block/platform/soc/1d84000.ufshc/by-name/oppodycnvbk                                                u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/oppostanvbk                                                u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/opporeserve[0-9]                                                u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/oppo_sec                                                u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000\.sdhci/by-name/oppodycnvbk                               u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000\.sdhci/by-name/oppostanvbk                               u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000\.sdhci/by-name/opporeserve[0-9]                          u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000\.sdhci/by-name/oppo_sec                                  u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/oppodycnvbk                                                u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/oppostanvbk                                                u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/opporeserve[0-9]                                          u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/oppo_sec                                                  u:object_r:modem_efs_partition_device:s0
 
 # mdmreason device
 /dev/mdmreason             u:object_r:mdmreason_device:s0
