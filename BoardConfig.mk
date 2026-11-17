@@ -89,7 +89,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml
 
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # HWUI
@@ -195,5 +195,3 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 TARGET_KERNEL_LIBC_SYSROOT_USE := host
-
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
