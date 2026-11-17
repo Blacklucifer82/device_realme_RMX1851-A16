@@ -224,3 +224,6 @@ zygote.critical_window.minute=10
 # Storage: no sdcardfs. vold then sets the default ACLs on Android/data and Android/obb that other
 # services (DownloadManager, MediaProvider) need to write into app folders.
 external_storage.sdcardfs.enabled=0
+
+# eBPF
+ro.bpf.kver_override=5.15.178

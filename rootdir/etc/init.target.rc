@@ -52,6 +52,11 @@ on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
 
 on boot
+    # Force early ADB
+    write /sys/bus/platform/devices/a600000.ssusb/mode peripheral
+    setprop persist.sys.usb.config adb
+    setprop sys.usb.config adb
+
     start rmt_storage
     start rfs_access
 
