@@ -17,6 +17,14 @@
 import common
 import re
 
+def FullOTA_InstallBegin(info):
+  OTA_InstallBegin(info)
+  return
+
+def IncrementalOTA_InstallBegin(info):
+  OTA_InstallBegin(info)
+  return
+
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
@@ -34,6 +42,11 @@ def AddImage(info, basename, dest):
   common.ZipWriteStr(info.output_zip, basename, data)
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
+
+def OTA_InstallBegin(info):
+  # Ensure /dev/block/by-name symlinks exist for custom recoveries (e.g. OrangeFox/TWRP)
+  info.script.AppendExtra('symlink("/dev/block/bootdevice/by-name", "/dev/block/by-name");')
+  return
 
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
