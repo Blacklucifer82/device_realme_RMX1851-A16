@@ -81,4 +81,7 @@
 
     <!-- Indicate the device support request channel on Wi-Fi Aware data-path. -->
     <bool name="config_wifiSupportChannelOnDataPath" translatable="false">true</bool>
+    <!-- Disable bridged SoftAP / Dual AP on WCN3990 -->
+    <bool translatable="false" name="config_wifiBridgedSoftApSupported">false</bool>
+    <bool translatable="false" name="config_wifi_dual_sap_mode">false</bool>
 </resources>

@@ -227,3 +227,9 @@ external_storage.sdcardfs.enabled=0
 
 # eBPF
 ro.bpf.kver_override=5.15.178
+
+# Wi-Fi
+wifi.interface=wlan0
+wifi.concurrent.interface=wlan1
+ro.vendor.wifi.sap.interface=wlan1
+ro.vendor.wifi.sap.concurrent.iface=wlan1

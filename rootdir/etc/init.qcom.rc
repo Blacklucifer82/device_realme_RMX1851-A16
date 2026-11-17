@@ -197,6 +197,8 @@ on boot
     mkdir /dev/socket/wigig 0770 wifi wifi
 
     setprop wifi.interface wlan0
+    setprop wifi.concurrent.interface wlan1
+    setprop ro.vendor.wifi.sap.interface wlan1
 
     setprop ro.telephony.call_ring.multiple false
 
