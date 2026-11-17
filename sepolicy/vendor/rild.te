@@ -13,3 +13,4 @@ dontaudit rild cache_file:file { create write open };
 allow rild mnt_vendor_file:dir search;
 allow rild mnt_vendor_file:file { read write open };
 binder_call(rild, qtidataservices_app)
+allow rild vendor_hal_telephony_service2:service_manager { add find };
