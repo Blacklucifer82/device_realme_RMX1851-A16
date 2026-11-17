@@ -1,5 +1,6 @@
 # Wlan
 vendor.wlan.  u:object_r:vendor_wifi_prop:s0
+ro.vendor.wifi.  u:object_r:vendor_wifi_prop:s0
 wifi.active.interface              u:object_r:wifi_hal_prop:s0
 
 # Oppo Audio props

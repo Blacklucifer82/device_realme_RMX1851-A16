@@ -218,3 +218,9 @@ vendor.usb.use_gadget_hal=1
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Wi-Fi
+wifi.interface=wlan0
+wifi.concurrent.interface=wlan1
+ro.vendor.wifi.sap.interface=wlan1
+ro.vendor.wifi.sap.concurrent.iface=wlan1
