@@ -1,25 +1,31 @@
 #!/bin/bash
 
 banner(){
-clear
 echo "================================"
 echo "|                              |"
 echo "|   Realme 3 Pro Setup Script  |"
-echo "|     Branch: Infinity-16      |"
+echo "|     Branch: Android 17 (LOS) |"
 echo "|    Maintained By: Sourabh    |"
 echo "|                              |"
 echo "================================"
 }
 
-banner 2>1
+banner
 
 # Kernel
-banner 2>1
-echo "Cloning Kernel..."
-# git clone --depth=1 https://github.com/kdrag0n/proton-clang.git prebuilts/clang/host/linux-x86/clang-proton
-git clone --depth=1 https://github.com/Blacklucifer82/android_kernel_realme_sdm710.git -b 16-bpf kernel/realme/sdm710
+if [ ! -d "kernel/realme/sdm710" ]; then
+    echo "Cloning Kernel (17-bpf)..."
+    git clone --depth=1 https://github.com/Blacklucifer82/android_kernel_realme_sdm710.git -b 17-bpf kernel/realme/sdm710
+fi
 
-# vendor
-banner 2>1
-echo "Cloning vendor..."
-git clone https://github.com/Blacklucifer82/vendor-realme-RMX1851-A16.git -b 16 vendor/realme/RMX1851
+# Vendor
+if [ ! -d "vendor/realme/RMX1851" ]; then
+    echo "Cloning Vendor (17)..."
+    git clone https://github.com/Blacklucifer82/vendor-realme-RMX1851-A16.git -b 17 vendor/realme/RMX1851
+fi
+
+# Dolby
+if [ ! -d "hardware/dolby" ]; then
+    echo "Cloning Dolby (16)..."
+    git clone https://github.com/Blacklucifer82/hardware_dolby.git -b 16 hardware/dolby
+fi
