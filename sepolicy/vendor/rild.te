@@ -4,7 +4,7 @@ r_dir_file(rild, proc_devinfo)
 
 allow rild block_device:dir search;
 allow rild opporadio_hwservice:hwservice_manager { add find };
-allow rild vendor_pd_locater_dbg_prop:file { read open getattr };
+get_prop(rild, vendor_pd_locater_dbg_prop)
 allow rild diag_device:chr_file rw_file_perms;
 dontaudit rild system_data_file:dir { search getattr write add_name };
 dontaudit rild system_data_file:file { create write open };
