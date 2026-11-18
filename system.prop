@@ -6,7 +6,7 @@ persist.sysui.disableBlur=true
 ro.launcher.blur.appLaunch=0
 
 # Camera
-ro.camera.hfr.enable=0
+ro.camera.hfr.enable=1
 persist.camera.HAL3.enabled=1
 ro.camera.relight.enable=0
 ro.camera.attr.detect.enable=1
