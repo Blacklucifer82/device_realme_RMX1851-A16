@@ -99,9 +99,10 @@
         </effectProxy>
     </effects>
     <postprocess>
-        <stream type="music">
+        <!-- # Comment out music_helper to prevent volume_listener from killing bass and over-boosting treble -->
+        <!-- <stream type="music">
             <apply effect="music_helper"/>
-        </stream>
+        </stream> -->
         <stream type="ring">
             <apply effect="ring_helper"/>
         </stream>
