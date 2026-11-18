@@ -25,7 +25,7 @@ if [ ! -d "vendor/realme/RMX1851" ]; then
 fi
 
 # Dolby
-if [ ! -d "hardware/dolby" ]; then
-    echo "Cloning Dolby (16)..."
-    git clone https://github.com/Blacklucifer82/hardware_dolby.git -b 16 hardware/dolby
+if [ ! -d "vendor/lunaris/dolby" ]; then
+    echo "Cloning Lunaris Dolby..."
+    git clone https://github.com/Blacklucifer82/vendor_lunaris_dolby.git vendor/lunaris/dolby
 fi

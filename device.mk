@@ -126,7 +126,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
 # Dolby
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+$(call inherit-product, vendor/lunaris/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
