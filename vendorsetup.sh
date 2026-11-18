@@ -4,7 +4,7 @@ banner(){
 echo "================================"
 echo "|                              |"
 echo "|   Realme 3 Pro Setup Script  |"
-echo "|     Branch: Android 17 (LOS) |"
+echo "|     Branch: Infinity-17      |"
 echo "|    Maintained By: Sourabh    |"
 echo "|                              |"
 echo "================================"
