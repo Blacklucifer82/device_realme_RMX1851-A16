@@ -12,8 +12,8 @@ allow hal_camera_default proc_oppoversion:dir search;
 allow hal_camera_default proc_meminfo:file { getattr open read };
 allow hal_camera_default proc_oppoversion:file { open read getattr };
 allow hal_camera_default unlabeled:dir { search };
-allow hal_camera_default oppo_debug_prop:file { read open getattr };
-allow hal_camera_default oppo_fingerprint_prop:file { read open getattr };
+get_prop(hal_camera_default, oppo_debug_prop)
+get_prop(hal_camera_default, oppo_fingerprint_prop)
 allow hal_camera_default default_prop:file { map getattr };
 allow hal_camera_default radio_prop:file { getattr };
 dontaudit hal_camera_default radio_prop:file read;

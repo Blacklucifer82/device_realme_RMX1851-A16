@@ -1,2 +1,2 @@
 get_prop(mediacodec, vendor_mpctl_prop);
-allow mediacodec vendor_audio_prop:file { read open };
+get_prop(mediacodec, vendor_audio_prop)
