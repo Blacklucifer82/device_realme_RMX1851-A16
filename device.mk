@@ -126,6 +126,8 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-imag
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
+PRODUCT_DEX_PREOPT_MODULE_CONFIGS += qti-telephony-common=disable
+DEXPREOPT_DISABLED_MODULES += qti-telephony-common
 
 # Dolby
 $(call inherit-product, vendor/lunaris/dolby/dolby.mk)
