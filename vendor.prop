@@ -224,3 +224,6 @@ wifi.interface=wlan0
 wifi.concurrent.interface=wlan1
 ro.vendor.wifi.sap.interface=wlan1
 ro.vendor.wifi.sap.concurrent.iface=wlan1
+
+# Storage: no sdcardfs
+external_storage.sdcardfs.enabled=0
