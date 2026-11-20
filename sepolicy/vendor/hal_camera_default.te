@@ -15,6 +15,7 @@ allow hal_camera_default unlabeled:dir { search };
 get_prop(hal_camera_default, oppo_debug_prop)
 get_prop(hal_camera_default, oppo_fingerprint_prop)
 allow hal_camera_default default_prop:file { map getattr };
+dontaudit hal_camera_default default_prop:file { read open };
 allow hal_camera_default radio_prop:file { getattr };
 dontaudit hal_camera_default radio_prop:file read;
 hal_client_domain(hal_camera_default, hal_graphics_allocator)
