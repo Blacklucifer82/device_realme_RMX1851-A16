@@ -381,6 +381,8 @@ PRODUCT_SOONG_NAMESPACES += \
     bootable/deprecated-ota \
     vendor/qcom/opensource/usb/etc \
     hardware/qcom-caf/sdm845 \
+    hardware/qcom-caf/wlan \
+    hardware/qcom-caf/wlan/qcwcn \
     hardware/google/interfaces \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \

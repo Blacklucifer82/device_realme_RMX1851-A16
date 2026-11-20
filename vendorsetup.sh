@@ -1,13 +1,13 @@
 #!/bin/bash
 
 banner(){
-echo "================================"
-echo "|                              |"
-echo "|   Realme 3 Pro Setup Script  |"
-echo "|     Branch: Android 17 (LOS) |"
-echo "|    Maintained By: Sourabh    |"
-echo "|                              |"
-echo "================================"
+echo "================================="
+echo "|                               |"
+echo "|   Realme 3 Pro Setup Script   |"
+echo "|   Branch: RisingOS 17 (LOS)   |"
+echo "|     Maintained By: Sourabh    |"
+echo "|                               |"
+echo "================================="
 }
 
 banner

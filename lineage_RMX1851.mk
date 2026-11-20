@@ -6,8 +6,6 @@
 
 # Inherit some common LineageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_ENABLE_BLUR := true
-TARGET_USES_MINI_GAPPS := true
 TARGET_DISABLE_EPPE := true
 PERF_ANIM_OVERRIDE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)

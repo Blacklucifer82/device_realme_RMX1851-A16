@@ -11,7 +11,6 @@
 /dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1,async_discard         wait
 /dev/block/bootdevice/by-name/cache                     /cache                   f2fs    nosuid,nodev,noatime,inline_xattr,flush_merge,data_flush                                 wait,formattable,check
-/dev/block/by-name/system                               /system                  erofs   ro                                                   wait,first_stage_mount
 /dev/block/by-name/system                               /system                  ext4    ro,barrier=1                                         wait,first_stage_mount
 /dev/block/by-name/vendor                               /vendor                  erofs   ro                                                   wait,first_stage_mount
 /dev/block/by-name/vendor                               /vendor                  ext4    ro,barrier=1                                         wait,first_stage_mount

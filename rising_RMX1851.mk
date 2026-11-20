@@ -1,0 +1,30 @@
+#
+# Copyright (C) 2024 RisingOS-Revived
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Inherit some common LineageOS stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DISABLE_EPPE := true
+PERF_ANIM_OVERRIDE := true
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Inherit from RMX1851 device
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
+
+PRODUCT_BRAND := realme
+PRODUCT_DEVICE := RMX1851
+PRODUCT_MANUFACTURER := realme
+PRODUCT_NAME := rising_RMX1851
+PRODUCT_MODEL := RMX1851
+
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="RMX1851-user 11 RKQ1.201217.002 1623376276806 release-keys" \
+    BuildFingerprint=realme/RMX1851/RMX1851:11/RKQ1.201217.002/1623376276806:user/release-keys \
+    DeviceName=RMX1851 \
+    DeviceProduct=RMX1851 \
+    SystemDevice=RMX1851 \
+    SystemName=RMX1851
