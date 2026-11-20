@@ -102,10 +102,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Context Hub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -121,6 +117,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.hardware.display.allocator@1.0-service
 
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 # Dexpreopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
@@ -128,6 +126,8 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-imag
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
+PRODUCT_DEX_PREOPT_MODULE_CONFIGS += qti-telephony-common=disable
+DEXPREOPT_DISABLED_MODULES += qti-telephony-common
 
 # Dolby
 $(call inherit-product, vendor/lunaris/dolby/dolby.mk)
@@ -149,6 +149,9 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
     FM2
+
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
 
 # IPA
 PRODUCT_PACKAGES += \
@@ -451,3 +454,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+
+-include vendor/lineage-priv/keys/keys.mk
+
