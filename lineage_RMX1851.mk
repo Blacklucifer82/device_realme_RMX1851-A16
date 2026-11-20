@@ -9,7 +9,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
 PERF_ANIM_OVERRIDE := true
 TARGET_DISABLE_EPPE := true
-WITH_GMS := true
+WITH_GMS ?= false
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
