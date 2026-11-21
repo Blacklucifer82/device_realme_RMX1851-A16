@@ -31,7 +31,11 @@ function configure_zram_parameters() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
-    echo lz4 > /sys/block/zram0/comp_algorithm
+    if grep -q "zstd" /sys/block/zram0/comp_algorithm; then
+        echo zstd > /sys/block/zram0/comp_algorithm
+    else
+        echo lz4 > /sys/block/zram0/comp_algorithm
+    fi
     echo 160 > /proc/sys/vm/swappiness
     echo 60 > /proc/sys/vm/direct_swappiness
     echo 0 > /proc/sys/vm/page-cluster
