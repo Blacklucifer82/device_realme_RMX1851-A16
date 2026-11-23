@@ -157,3 +157,13 @@ persist.sys.wfd.virtual=0
 
 # eBPF
 ro.bpf.kver_override=5.15.178
+
+# MistOS
+ro.mist.display=1080 x 2340, 60 hz
+ro.mist.battery=4045mah
+ro.mist.soc=Snapdragon® 710
+ro.mist.camera=16MP + 5MP
+ro.mist.front=25MP
+ro.mist.platform=SDM710
+ro.mist.screen=6.3' IPS LCD
+ro.mist.device.name=Realme 3 Pro 

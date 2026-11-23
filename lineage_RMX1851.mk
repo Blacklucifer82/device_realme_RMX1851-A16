@@ -4,12 +4,20 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common LineageOS stuff
+# Inherit some common mistOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
+WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
 TARGET_DISABLE_EPPE := true
 PERF_ANIM_OVERRIDE := true
+# Now Playing
+TARGET_SUPPORTS_NOW_PLAYING := true
+# Quick tap
+TARGET_SUPPORTS_QUICK_TAP  := true
+# Mist OS Flags
+MIST_BUILD_TYPE := UNOFFICIAL
+MISTOS_MAINTAINER := Hansraj
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
