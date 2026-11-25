@@ -109,10 +109,12 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.google.android.GoogleCamera,com.camera.lmc84r7
+persist.vendor.camera.privapp.list=org.lineageos.aperture,com.google.android.GoogleCamera,com.camera.lmc84r7
 persist.camera.HAL3.enabled=1
-persist.camera.gyro.disable=0
+persist.camera.gyro.disable=1
 persist.vendor.camera.is_type=4
-persist.vendor.camera.eis.enable=1
+persist.vendor.camera.eis.enable=0
 
 # CNE
 persist.vendor.cne.feature=1
